@@ -3,25 +3,15 @@ from nextcord.ext import commands
 import requests
 import os
 import json
+from dotenv import load_dotenv
 
-# Client code
-# client = discord.Client()
+load_dotenv()
 
-# @client.event
-# async def on_ready():
-#     print("We have logged in as {0.user}".format(client))
+bot_token = os.getenv("TOKEN")
 
-# @client.event
-# async def on_message(message):
-#     if message.author == client.user:
-#         return
-
-#     if message.content.startswith("$hello"):
-#         await message.channel.send("Hello!")
-
-# client.run("OTI0ODI4NzM3MjE4OTUzMjI3.YckP4Q.kCrcVbOxe4iwVyfk-OGsPv9XklI")
-
-# Bot code
+###########################################################################
+# Bot code begins
+###########################################################################
 
 bot = commands.Bot(command_prefix="$", description="This is a Helper Bot")
 
@@ -94,4 +84,4 @@ async def random(ctx):
     await ctx.send(msg)
 
 
-bot.run("[TOKEN HERE]")
+bot.run(bot_token)
