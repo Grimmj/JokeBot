@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 bot_token = os.getenv("TOKEN")
+rand_api = os.getenv("RAND_API")
 
 ###########################################################################
 # Bot code begins
@@ -74,7 +75,7 @@ async def chuck(ctx):
 async def random(ctx):
     try:
         response = requests.get(
-            "https://v2.jokeapi.dev/joke/Miscellaneous,Dark,Pun?blacklistFlags=racist,sexist,explicit&type=single")
+            rand_api)
         r = json.loads(response.text)
     except:
         print("ERROR: Could not retrieve joke")
