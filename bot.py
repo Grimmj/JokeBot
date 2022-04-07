@@ -1,4 +1,3 @@
-import discord
 from nextcord.ext import commands
 import requests
 import os
