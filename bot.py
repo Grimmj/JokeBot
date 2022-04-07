@@ -94,4 +94,4 @@ async def random(ctx):
     await ctx.send(msg)
 
 
-bot.run("OTI0ODI4NzM3MjE4OTUzMjI3.YckP4Q.kCrcVbOxe4iwVyfk-OGsPv9XklI")
+bot.run("[TOKEN HERE]")
