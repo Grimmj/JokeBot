@@ -78,7 +78,7 @@ async def random(ctx):
         r = json.loads(response.text)
     except:
         print("ERROR: Could not retrieve joke")
-        r = "Sorry, I couldn't think of a 'Chuck Norris' joke..."
+        r = "Sorry, I couldn't think of a 'Random' joke..."
 
     msg = f"```{r['joke']}```"
     await ctx.send(msg)
